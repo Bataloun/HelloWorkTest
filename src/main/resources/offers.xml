@@ -1,0 +1,56 @@
+<Root>
+    <Offer>
+        <Description>Hello World</Description>
+        <Reference>1</Reference>
+        <FrenchDate>25/12/2023 14:30:00</FrenchDate>
+    </Offer>
+    <Offer>
+        <Description>Bonjour le monde</Description>
+        <Reference>2</Reference>
+        <FrenchDate>01/01/2024 12:00:00</FrenchDate>
+    </Offer>
+    <Offer>
+        <Description>Hola Mundo</Description>
+        <Reference>3</Reference>
+        <FrenchDate>15/08/2023 10:15:00</FrenchDate>
+    </Offer>
+    <Offer>
+        <Description>Hallo Welt</Description>
+        <Reference>4</Reference>
+        <FrenchDate>31/10/2023 23:59:59</FrenchDate>
+    </Offer>
+    <Offer>
+        <Description>Ciao Mondo</Description>
+        <Reference>5</Reference>
+        <FrenchDate>05/06/2023 08:45:00</FrenchDate>
+    </Offer>
+    <Offer>
+        <Description>Olá Mundo</Description>
+        <Reference>6</Reference>
+        <FrenchDate>20/03/2023 14:20:00</FrenchDate>
+    </Offer>
+    <Offer>
+        <Description>Привет мир</Description>
+        <Reference>7</Reference>
+        <FrenchDate>10/09/2023 18:30:00</FrenchDate>
+    </Offer>
+    <Offer>
+        <Description>こんにちは世界</Description>
+        <Reference>8</Reference>
+        <FrenchDate>14/07/2023 16:00:00</FrenchDate>
+    </Offer>
+    <Offer>
+        <Description>안녕하세요 세계</Description>
+        <Reference>9</Reference>
+        <FrenchDate>21/04/2023 20:15:00</FrenchDate>
+    </Offer>
+    <Offer>
+        <Description>م د  </Description>
+        <Reference>10</Reference>
+        <FrenchDate>30/11/2023 07:05:00</FrenchDate>
+    </Offer>
+    <Offer>
+        <Description>Merhaba Dünya</Description>
+        <FrenchDate>19/02/2024 13:45:00</FrenchDate>
+    </Offer>
+</Root>

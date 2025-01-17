@@ -1,0 +1,6 @@
+testHelloWork\App.class
+testHelloWork\service\OfferService.class
+testHelloWork\util\XSLTTransformer.class
+testHelloWork\dao\OfferDAO.class
+testHelloWork\util\XSLTFunctions.class
+testHelloWork\model\Offer.class
