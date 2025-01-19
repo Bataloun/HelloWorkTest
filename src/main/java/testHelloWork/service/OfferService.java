@@ -7,6 +7,11 @@ public class OfferService {
     private final OfferDAO offerDAO = new OfferDAO();
 
     public void storeOffer(String reference, String description, String frenchDate) {
+        if (offerDAO.offerExists(reference)) {
+            System.out.println("L'offre avec la référence " + reference + " existe déjà.");
+            return;
+        }
+
         Offer offer = new Offer(reference, description, frenchDate);
         offerDAO.insertOffer(offer);
 

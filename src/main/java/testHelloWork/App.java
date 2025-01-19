@@ -4,10 +4,8 @@ import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
-import org.bson.Document;
 import testHelloWork.model.Offer;
+import testHelloWork.service.OfferService;
 import testHelloWork.util.XSLTTransformer;
 
 import java.io.File;
@@ -72,26 +70,12 @@ public class App {
             // Lire le fichier XML transformé et extraire les offres
             List<Offer> offers = parseTransformedXML(outputXmlPath);
 
-            //Insérer les offres dans MongoDB
-            MongoDatabase database = getMongoClient().getDatabase("testDatabase");
-            MongoCollection<Document> collection = database.getCollection("offers");
+            OfferService offerService = new OfferService();
 
             int insertedCount = 0;
             for (Offer offer : offers) {
-                // Vérifier si l'offre existe déjà
-                Document existingOffer = collection.find(new Document("reference", offer.getReference())).first();
-
-                if (existingOffer == null) {
-                    // Insérer l'offre si elle n'existe pas
-                    Document doc = new Document("reference", offer.getReference())
-                            .append("description", offer.getDescription())
-                            .append("frenchDate", offer.getFrenchDate());
-                    collection.insertOne(doc);
-                    System.out.println("Offre insérée : " + doc.toJson());
-                    insertedCount++;
-                } else {
-                    System.out.println("Offre déjà présente avec la description : " + offer.getDescription());
-                }
+                offerService.storeOffer(offer.getReference(), offer.getDescription(), offer.getFrenchDate());
+                insertedCount++;
             }
 
             System.out.println("Nombre total d'offres insérées : " + insertedCount);

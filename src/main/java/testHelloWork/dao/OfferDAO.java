@@ -19,10 +19,16 @@ public class OfferDAO {
                 .append("description", offer.getDescription())
                 .append("frenchDate", offer.getFrenchDate());
         collection.insertOne(doc);
-        System.out.println("Offer insérée avec succès : " + offer.getReference());
+        System.out.println("Offer insérée avec succès : " + offer.getDescription());
     }
 
     public long countOffers() {
         return collection.countDocuments();
     }
+
+    public boolean offerExists(String reference) {
+        Document existingOffer = collection.find(new Document("reference", reference)).first();
+        return existingOffer != null;
+    }
+
 }
