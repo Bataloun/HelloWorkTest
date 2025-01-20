@@ -10,7 +10,10 @@
                 <TransformedOffer>
                     <UpperCase>
                         <!-- Convertir la description en majuscules -->
-                        <xsl:value-of select="translate(Description, 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
+                        <xsl:value-of select="translate(Description,
+                        'abcdefghijklmnopqrstuvwxyzéèêëàâäùûüîïç',
+                        'ABCDEFGHIJKLMNOPQRSTUVWXYZÉÈÊËÀÂÄÙÛÜÎÏÇ')" />
+
                     </UpperCase>
                     <Reference>
                         <xsl:value-of select="Reference" />
